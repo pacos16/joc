@@ -22,4 +22,12 @@ public abstract class Poti extends Item {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Poti{" +
+                "nombre: "+super.getNombre()+ " "+
+                "descripcion: '" + descripcion + '\'' +
+                '}';
+    }
 }

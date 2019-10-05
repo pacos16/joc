@@ -1,11 +1,13 @@
 package items.consumibles;
 
 public class PotiDanyo extends Poti {
+    private final static String nombre="Pocion de daño";
+    private final static String imagen="Src";
+    private final static String descripcion="Aumenta tu daño en 5";
+    private final static int precio=150;
 
-    private int precio;
-
-    public PotiDanyo(String nombre, String imagen, String descripcion, int precio) {
+    public PotiDanyo() {
         super(nombre, imagen, descripcion);
-        this.precio = precio;
+
     }
 }

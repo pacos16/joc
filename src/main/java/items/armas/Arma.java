@@ -18,4 +18,12 @@ public abstract class Arma extends Item {
     public void setDanyo(int danyo) {
         this.danyo = danyo;
     }
+
+    @Override
+    public String toString() {
+        return "Arma{" +
+                "Nombre: "+super.getNombre()+ " " +
+                "danyo: " + danyo +
+                '}';
+    }
 }

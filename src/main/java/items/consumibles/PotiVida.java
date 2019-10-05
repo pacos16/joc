@@ -2,18 +2,13 @@ package items.consumibles;
 
 public class PotiVida extends Poti {
 
-    private int precio;
+    private final static String nombre="Pocion de Vida";
+    private final static String imagen="Src";
+    private final static String descripcion="Recuperas 50 de vida";
+    private final static int precio=150;
 
-    public PotiVida(String nombre, String imagen, String descripcion, int precio) {
+    public PotiVida() {
         super(nombre, imagen, descripcion);
-        this.precio = precio;
-    }
 
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
     }
 }
