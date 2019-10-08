@@ -26,4 +26,7 @@ public abstract class Item implements Serializable {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    //todo add action method
+
 }
