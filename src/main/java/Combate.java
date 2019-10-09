@@ -51,6 +51,8 @@ public class Combate implements Serializable {
         }else{
             System.out.println("Fin del combate ha ganado "+personajeEnCombate2.getNombreJugador());
         }
+        System.out.println("Pulse intro para continuar");
+        lector.nextLine();
     }
 
     private Item atacarOItem(PersonajeEnCombate p){
@@ -159,10 +161,19 @@ public class Combate implements Serializable {
         for (int i=0;i<turnos.size();i++
              ) {
             stringBuilder.append("Turno:  ").append(i+1).append("\n");
-            stringBuilder.append(jugador1.getNombre()).append(" ").append(turnos.get(i).getVidaP1()).append("\n");
-
-            stringBuilder.append(jugador2.getNombre()).append(" ").append(turnos.get(i).getVidaP2()).append("\n");
-
+            stringBuilder.append(jugador1.getNombre()).append(" Vida final de turno: ").append(turnos.get(i).getVidaP1());
+            if(turnos.get(i).getItemP1()==null){
+                stringBuilder.append(" Accion: atacar \n");
+            }else{
+                stringBuilder.append(" Item: ").append(turnos.get(i).getItemP1().getNombre()).append("\n");
+            }
+            stringBuilder.append(jugador2.getNombre()).append(" Vida final de turno: ").append(turnos.get(i).getVidaP2());
+            if(turnos.get(i).getItemP2()==null){
+                stringBuilder.append(" Accion: atacar \n");
+            }else{
+                stringBuilder.append(" Item: ").append(turnos.get(i).getItemP2().getNombre()).append("\n");
+            }
+            stringBuilder.append("\n");
         }
         return stringBuilder.toString();
 
