@@ -1,5 +1,6 @@
 import items.Item;
 import items.armas.ArmaDeClase;
+import items.consumibles.PotiVida;
 import personajes.Personaje;
 
 import java.io.Serializable;
@@ -9,6 +10,7 @@ public class Jugador implements Serializable{
 
     private String nombre;
     private Personaje personaje;
+    //apartado a) anyadir arraylist de items a jugador. classe item, llistarElementsMochila() torna string.
     private ArrayList<Item> mochila;
 
     public Jugador(){}
@@ -16,7 +18,7 @@ public class Jugador implements Serializable{
         this.nombre = nombre;
         this.personaje = personaje;
         this.mochila = new ArrayList<>();
-        mochila.add(personaje.getArmaDeClase());
+        mochila.add(new PotiVida());
     }
 
     public boolean anyadirAMochila(Item item){
@@ -51,8 +53,19 @@ public class Jugador implements Serializable{
     public String toString() {
         return "Jugador{" +
                 "nombre='" + nombre + '\'' +
-                ", personaje=" + personaje +
-                ", mochila=" + mochila +
-                '}';
+                "," + personaje +
+                ", Mochila=" + mochila +
+                "}\n"
+                ;
+    }
+    public String llistarElementsMochila(){
+
+        StringBuilder stringBuilder=new StringBuilder();
+
+        for (Item i: mochila
+             ) {
+            stringBuilder.append(i.toString()).append("\n");
+        }
+        return stringBuilder.toString();
     }
 }

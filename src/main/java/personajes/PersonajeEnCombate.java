@@ -1,6 +1,8 @@
 package personajes;
 
 import items.Item;
+import items.consumibles.PotiDanyo;
+import items.consumibles.PotiVida;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,12 +17,13 @@ public class PersonajeEnCombate  implements Serializable {
     public PersonajeEnCombate(){    }
 
 
-    public PersonajeEnCombate(String nombreJugador, Personaje personaje, ArrayList mochila) {
+    public PersonajeEnCombate(String nombreJugador, Personaje personaje, ArrayList<Item> mochila) {
         this.nombreJugador=nombreJugador;
         this.personaje = personaje;
         vidaActual=personaje.getVida();
         fuerzaActual= personaje.getFuerza();
         this.mochila=mochila;
+
     }
 
     public ArrayList<Item> getMochila() {

@@ -51,4 +51,5 @@ public class Turno implements Serializable {
     public void setItemP2(Item itemP2) {
         this.itemP2 = itemP2;
     }
+
 }

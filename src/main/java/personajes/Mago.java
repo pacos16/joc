@@ -5,7 +5,7 @@ import items.armas.ArmaDeClase;
 public class Mago extends Personaje {
     static final int FUERZA_MAGICA = 80;
     static final String nombre="Mage";
-    static final int VIDA=100;
+    static final int VIDA=900;
     public Mago() {
         super(nombre,FUERZA_MAGICA, VIDA,new ArmaDeClase("null",FUERZA_MAGICA,
                 ArmaDeClase.ArmasDeClase.MAGE));
